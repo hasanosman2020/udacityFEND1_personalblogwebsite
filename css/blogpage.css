@@ -1,0 +1,107 @@
+.container-blog {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0, 576px) minmax(1em, 1fr);
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    color: #102B3F;
+}
+
+.container-blog > * {
+    grid-column: 2 / -1  ;
+}
+
+.blogpage-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    color: #102B3F;
+    margin-bottom: 1em;
+}
+
+.blog-content,
+.blog-sidebar {
+    text-align: justify;
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    color: #102B3F;
+    margin: 0 auto;
+}
+
+.blog-content {
+    border-bottom: 5px solid #102B3F;
+    padding-bottom: 0.5em;
+}
+
+.blog-sidebar {
+    border-bottom: none;
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+}
+
+
+@media(min-width: 576px){
+
+    .container-blog {
+        display: grid;
+        margin: 1em;
+        padding: 1em;
+        grid-template-columns: minmax(1em, 1fr) minmax(576px, 991px) minmax(1em, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "hd hd hd hd hd hd"
+            "main main main main sd sd"
+            "main main main main sd sd";
+    }
+
+    .blog-title {
+        grid-area: hd;
+        font-size: 1.5rem;
+
+    }
+
+    .blog-content {
+        grid-area: main;
+        font-size: 1.2rem;
+        border-right: 5px solid #102B3F;
+        border-bottom: none;
+        padding-right: 1em;
+    }
+
+    .blog-sidebar {
+        grid-area: sd;
+        font-size: 1.2rem;
+        border-bottom: none;
+        padding-left: 1em;
+    }
+}
+
+@media(min-width:992px){
+
+.container-blog {
+    grid-template-columns: minmax(1em, 1fr) minmax(992px, 1300px) minmax(1em, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd hd"
+        "main main main main main main sd sd sd sd"
+        "main main main main main main sd sd sd sd";
+}
+ .blogpage-title {
+     grid-area: hd;
+     font-size: 1.5rem;
+    }
+
+ .blog-content {
+     grid-area: main;
+     font-size: 1.2rem;
+     border-right: 5px solid #102B3F;
+     border-bottom: none;
+ }
+
+
+ .blog-sidebar {
+     grid-area: sd;
+     font-size: 1.2rem;
+     border-bottom: none;
+ }
+
+}

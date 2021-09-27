@@ -1,0 +1,171 @@
+@media (min-width: 576px){
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav li {
+        margin-right: 1.5em;
+    }
+
+                
+    img{
+    margin: 0 auto;
+    }
+   
+
+    .card {
+         margin: 1em; 
+            }
+
+    .article-title {
+        margin-bottom: 1em;
+        text-decoration: underline;
+    }
+
+    .article-image {
+        order: 0;
+    }
+
+    .article-read-more {
+        order: 2;
+        margin-top: 0.5em;
+        
+    }
+
+    .article-archive::after {
+        order: 3;
+    }
+
+    .article-picture,
+    img {
+        width: 100%;
+    }
+    
+    .article-body {
+        order: 1;
+        text-align: justify;
+        margin-right: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .article-archive {
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+        grid-template-rows: minmax(1fr, auto);
+    }
+    
+    .sidebar-article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(1fr, auto);
+        grid-template-areas:
+            "card1 card2"
+            "author author";
+}
+
+.sidebar-title {
+    margin-bottom: 0.5em;
+}
+
+.card1 {
+    display: flex;
+    grid-area: card1;
+}
+
+.card2 {
+    display: flex;
+    grid-area: card2;
+}
+
+button {
+    margin-top: 1em;
+}
+
+#about {
+grid-area: author;
+}
+
+}
+
+
+@media (min-width: 992px){
+    nav li {
+        flex: 1;
+        }
+
+    #display-view {
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "recent recent recent recent sd sd"
+        "archive archive archive archive sd sd";
+    }     
+
+    .article-recent {
+        grid-area: recent;
+    }
+    
+    .article-text{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article-archive {
+        grid-area: archive;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article-body {
+        order: 1;
+        text-align: justify;
+        grid-area: body;
+    }
+
+    .article-title {
+        order: 0;
+        grid-area: text;
+    }
+
+    .sidebar-article {
+        grid-area: sd;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: minmax(1fr, auto);
+        grid-template-areas:
+            "card1"
+            "card2"
+            "author";
+        grid-gap: 2em;
+        margin: 0;
+        margin-left: 2em;
+    }
+
+    .card1 {
+        grid-area: card1;
+        }
+
+    .card2 {
+        grid-area: card2;
+        }
+
+    #about {
+        grid-area: author;
+        }
+    }
+    
+
+    
+ 
+
+
+
+
+
+
+
+

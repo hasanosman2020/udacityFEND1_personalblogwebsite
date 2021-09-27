@@ -1,0 +1,62 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 3px 4px 3px var(--jasmine);
+    margin-bottom: 1.6%;
+    background: var(--platinum);
+    line-height: 1.4;
+    font-family: "Ubuntu", sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sidebar-post
+
+ {
+    padding:1rem;
+    background: var(--platinum);
+    position: relative;
+
+}
+
+.sidebar-body {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.article-learn-more {
+    color: var(--jasmine);
+}
+
+.article-learn-more:hover {
+    font-weight: bold;
+}
+
+button {
+    border: 1px solid var(--jasmine);
+    background-color: var(--silver);
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: medium;
+    border-radius: 4px;
+    transition-duration:0.1s;
+}
+
+button:hover {
+    background-color: var(--jasmine);
+}
+
+.btn:hover {
+    color: var(--platinum);
+}
+
+button:active {
+    background-color: var(--jasmine);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
